@@ -16,3 +16,4 @@ const solve2 = (input: number[]) => {
 }
 
 printSolutions(solve1, solve2, input)
+
