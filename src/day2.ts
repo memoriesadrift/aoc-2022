@@ -1,4 +1,5 @@
 import {getInput, printSolutions} from './util/io.ts'
+import {sum} from './util/index.ts'
 
 const input = (await getInput(2, false)).filter((line) => line !== '')
 
@@ -41,7 +42,7 @@ const solve1 = (input: string[]) => {
 
     return calculateScore(played)
   })
-  .reduce((acc: number, curr) => acc + curr, 0)
+  .reduce(sum, 0)
 }
 
 const solve2 = (input: string[]) => {
@@ -54,7 +55,7 @@ const solve2 = (input: string[]) => {
 
     return calculateScoreGivenOutcome(played)
   })
-  .reduce((acc: number, curr) => acc + curr, 0)
+  .reduce(sum, 0)
 
 }
 
