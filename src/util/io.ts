@@ -5,7 +5,7 @@
  */
 const getInputFromFile = async (day: number, test = false) => await Deno.readTextFile(`res/day${day}.in${test ? '.test' : ''}`)
 
-export const getInput = async (day: number, test = false) => (await getInputFromFile(day, test)).split('\n')
+export const getInput = async (day: number, test = false) => (await getInputFromFile(day, test)).split('\n').filter((line) => line.length > 0)
 
 export const getInputSplitBy = async (day: number, split: string, test = false) => (await getInputFromFile(day, test)).split(split)
 
