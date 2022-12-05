@@ -7,6 +7,8 @@ const getInputFromFile = async (day: number, test = false) => await Deno.readTex
 
 export const getInput = async (day: number, test = false) => (await getInputFromFile(day, test)).split('\n').filter((line) => line.length > 0)
 
+export const getInputKeepEmptyLines = async (day: number, test = false) => (await getInputFromFile(day, test)).split('\n')
+
 export const getInputSplitBy = async (day: number, split: string, test = false) => (await getInputFromFile(day, test)).split(split)
 
 export const getInputAsIntList = async (day: number, test = false) => (await getInput(day, test)).map((e) => Number.parseInt(e))
