@@ -1,4 +1,4 @@
-import { ld } from 'https://x.nest.land/deno-lodash@1.0.0/mod.ts';
+import {_} from './util/lodash.ts'
 import {getInput, printSolutions} from './util/io.ts'
 import {sum} from './util/index.ts'
 
@@ -27,10 +27,10 @@ const solve1 = (input: string[]) => {
 }
 
 const solve2 = (input: string[]) => {
-  return ld.chunk(input, 3)
+  return _.chunk(input, 3)
   .map(
     ([first, second, third]: [string, string, string]) => {
-      const commonInFirstTwo = ld.uniq(
+      const commonInFirstTwo = _.uniq(
         first
           .split('')
           .filter((firstChar) => second.split('').find((secondChar) => secondChar === firstChar) !== undefined)

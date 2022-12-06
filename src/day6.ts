@@ -1,4 +1,4 @@
-import { ld } from 'https://x.nest.land/deno-lodash@1.0.0/mod.ts'
+import {_} from './util/lodash.ts'
 import {getInput, printSolutions} from './util/io.ts'
 
 const findMarker = (message: string, lengthOfMarker: number) => {
@@ -7,7 +7,7 @@ const findMarker = (message: string, lengthOfMarker: number) => {
     .reduce((acc, curr) => {
       if (
         acc.length === lengthOfMarker && 
-        ld.uniq(acc).length === acc.length
+        _.uniq(acc).length === acc.length
       ) return acc
 
       if (acc.length === lengthOfMarker) {
