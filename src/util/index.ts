@@ -2,6 +2,12 @@ import type {List} from './types.ts'
 
 export const sum = (acc: number, curr: number) => acc + curr
 
+export const transposeArray = <T>(arr: T[][]) => arr[0].map((_, colIndex) => arr.map((row) => row[colIndex]));
+
+/*
+ * Linked List Methods
+ */
+
 export const reverseList = <T>(list: List<T>): List<T> => {
   if (list.next === null) return list
 
@@ -20,3 +26,4 @@ export const appendToList = <T>(list: List<T>, other: List<T>): List<T> => {
   current.next = other
   return list
 }
+
