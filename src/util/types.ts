@@ -8,3 +8,8 @@ export type Pair<T, U> = {
   second: U
 }
 
+export type  Coord = {
+  x: number
+  y: number
+}
+

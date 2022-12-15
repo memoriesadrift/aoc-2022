@@ -1,7 +1,7 @@
 import {_} from './util/lodash.ts'
 import {getInput, printSolutions} from './util/io.ts'
+import type {Coord} from './util/types.ts'
 
-type Coord = {x: number, y: number}
 type Tile = "sand" | "rock"
 
 const buildMap = (coords: Coord[]): Map<string, Tile> => {
